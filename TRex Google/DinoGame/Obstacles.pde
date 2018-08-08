@@ -1,7 +1,7 @@
 class Obstacles
 {
   // CONST
-  private final int minimumTimeBetweenObstacles = 70;
+  private final int minimumTimeBetweenObstacles = 60;
   // FIELDS
   private ArrayList<Obstacle> obstacleList;
   private int obstacleTimer;
@@ -34,6 +34,11 @@ class Obstacles
     { 
       addObstacle();
       obstacleTimer = 0;
+      // cleaning time
+      if(obstacleList.size() > 20)
+      {
+        cleanUp();
+      }
     }
     
     for(int i = 0; i < obstacleList.size(); ++i)
@@ -45,7 +50,14 @@ class Obstacles
   // remove all obstacles which is not showed
   void cleanUp()
   {  
-    
+    for (int i = 0; i < obstacleList.size(); ++i) 
+    {
+     if (obstacleList.get(i).outOfScreen()) 
+     {
+        obstacleList.remove(i);
+        i--;//decrease the counter by one
+     }
+    }
   }
   void addObstacle() 
   {
