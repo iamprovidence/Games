@@ -7,6 +7,7 @@ class Game
   private boolean isGameOver;
   private PFont font;
   private int score;
+  private float gameSpeedBoosted;
   
   // CONSTRUCTORS
   Game(Background background, Dinosaur dinosaur, Obstacles obstacles)
@@ -17,6 +18,7 @@ class Game
     this.isGameOver = false;
     this.font = createFont("dinoFont.vlw", 32);
     this.score = 0;
+    this.gameSpeedBoosted = 0;
   }
   void show()
   {
@@ -40,6 +42,14 @@ class Game
       checkState();
       
       ++score;
+      // every 100 score
+      if(score % 100 == 0)
+      {
+        // speed up game
+        speed += 0.1;
+        // remember how much boost we get, so when game is over, set speed to normal
+        gameSpeedBoosted += 0.1;
+      }
       show();
     }
     else
@@ -56,6 +66,8 @@ class Game
   {
     if(obstacles.collided(dinosaur.X(), dinosaur.Y(),dinosaur.W(),dinosaur.H()))
     {
+      speed -= gameSpeedBoosted;
+      gameSpeedBoosted = 0;
       isGameOver = true;
     }
   }
