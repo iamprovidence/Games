@@ -1,6 +1,5 @@
 // CONFIGURATION
-static float speed = 5;// determine not only obstacles speed but also how often they spawn
-float fps = 60; // also increment speed;
+static float speed = 5;
 float groundHeight = 80;// ground height relative to the bottom
 int dotAmount = 20;
 int cloudAmount = 2;
