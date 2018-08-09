@@ -1,7 +1,7 @@
 class Obstacles
 {
   // CONST
-  private final int minimumTimeBetweenObstacles = 60;
+  private final int minimumTimeBetweenObstacles = 370;
   // FIELDS
   private ArrayList<Obstacle> obstacleList;
   private int obstacleTimer;
@@ -28,7 +28,7 @@ class Obstacles
   }
   void update()
   {
-    ++ obstacleTimer;
+    obstacleTimer += speed;
     // if the obstacle timer is high enough then add a new obstacle
     if (obstacleTimer > minimumTimeBetweenObstacles + random(30)) 
     { 
