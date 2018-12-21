@@ -43,18 +43,10 @@ class Pipe
   boolean outOfScreen()
   {
     return this.x < - pipeWidth;
-  }
-  
+  } 
   boolean collided(Bird bird) 
   {
-      // less than top or greater than bottom
-      if (bird.y < this.top || bird.y > this.bottom)
-      {
-        if (bird.x > this.x && bird.x < this.x + this.pipeWidth)
-        {
-          return true;
-        }
-      }
-      return false;
+    return (bird.y < this.top || bird.y > this.bottom) // less than top or greater than bottom
+          && bird.x > this.x && bird.x < this.x + this.pipeWidth; 
   }
 }
