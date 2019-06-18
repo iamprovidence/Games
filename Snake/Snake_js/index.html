@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake</title>
+        <meta charset="utf-8" />
+
+        <!--LINKS-->
+        <link rel="stylesheet" href="../../resources/libs/bootstrap-4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../../resources/libs/material/material.min.css"/>
+
+        <link rel="stylesheet" href="index.css"/>
+    </head>
+    <body>
+        <button id="go-back-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-A400 mdl-js-ripple-effect">go back</button>
+
+        <p id="name" class="text">snake</p>
+        <p id="score" class="text"></p>
+        <p id="speed" class="text"></p>
+
+        <div id="config">
+            <span class="text-light h5">
+                Block size
+            </span>
+            <div class="ml-2 mdl-textfield mdl-js-textfield text">
+                    <input id="grid-size-input" class="mdl-textfield__input" type="number" value="20" min="10" max="50">
+            </div>
+            <button id="reset-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-A400 mdl-js-ripple-effect">restart</button>
+        </div>
+
+
+        <!--LIBS-->
+        <script src="../../resources/libs/material/material.min.js"></script>
+
+        <script src="../../resources/libs/p5.min.js"></script>
+        <!--CUSTOM-->
+        <script src="Spot.js"></script>
+        <script src="Fruit.js"></script>
+        <script src="Snake.js"></script>
+        <script src="Game.js"></script>
+    </body>
+</html>

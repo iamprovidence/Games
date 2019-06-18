@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2048</title>
+
+        <!--bootsrap-->
+        <link rel="stylesheet" href="../resources/libs/bootstrap-4.3.1/css/bootstrap.min.css"/>
+        <!--material-->
+        <link rel="stylesheet" href="../resources/libs/material/material.min.css"/>
+        <script defer src="../resources/libs/material/material.min.js"></script>
+
+        <style>
+        body 
+        {
+            background-color: #223;
+        }
+        #wrapper 
+        {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        #game_container 
+        {
+            background-color: #334;
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+
+        .text
+        {
+            display: inline-block; 
+            margin-left: 10px; 
+            font-size: 17px; 
+            line-height: 17px; 
+            color: rgb(200, 200, 200);
+        }
+</style>
+    </head>
+    <body>
+        
+        <button id="button_go_back" class="ml-2 mt-2 mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">go back</button>
+        
+        <div id="wrapper">
+            
+            <div class="text-center text-light">
+                <p id="score" class="h3">0</p>
+            </div>
+            <div id="game_container"></div>
+            <br>
+            <button id="button_restart" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">restart</button>
+
+            <p class="text">Width: </p>            
+            <div class="mdl-textfield mdl-js-textfield text" >
+                <input id="input_grid_size" class="mdl-textfield__input" type="number" value="4" min="4" max="16">
+            </div>
+        </div>
+
+        <!--CODE-->
+        <script src="script.js"></script>
+    </body>
+</html>

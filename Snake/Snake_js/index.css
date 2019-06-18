@@ -1,0 +1,44 @@
+body
+{
+    background: #223;
+    text-align: center;
+}
+.text
+{
+    color: white;
+    font-size: 25px;
+}
+.p5Canvas
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+#config
+{
+    position: relative;
+    top: -10px;
+}
+#config > div
+{
+    width: 50px;
+}
+#name
+{
+    position: relative;
+    top: 70px;
+    text-transform: uppercase;
+}
+#score,
+#speed
+{
+    position: relative;
+    top: 755px;
+}
+#go-back-btn
+{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
