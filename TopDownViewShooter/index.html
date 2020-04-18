@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Top Down View Shooter</title>
+        <meta charset="utf-8" />
+
+        <!--LINKS-->
+        <link rel="stylesheet" href="../resources/libs/bootstrap-4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../resources/libs/material/material.min.css"/>
+
+        <link rel="stylesheet" href="index.css"/>
+    </head>
+    <body>
+        <a href="/Games/" id="go-back-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-color--orange-A400 mdl-js-ripple-effect">go back</a>
+
+        <p id="name" class="text">Shoot to Thrill</p>
+        <p id="score" class="text">Score 0</p>
+
+        <button id="restart" class="mdl-button mdl-js-button mdl-button--raised mdl-color--orange-A400 mdl-js-ripple-effect">restart</button>
+
+        <!--LIBS-->
+        <script src="../resources/libs/material/material.min.js"></script>
+		<script src="../resources/libs/p5.min.js"></script>
+       
+        <!--CUSTOM-->
+		<script src="src/Geometry.js"></script>
+		<script src="src/Point.js"></script>
+		<script src="src/Obstacle.js"></script>  
+		<script src="src/FogOfWar.js"></script>   
+		<script src="src/Zombie.js"></script>  
+		<script src="src/Bullet.js"></script> 
+		<script src="src/Player.js"></script>
+
+		<!--ENTRY POINT-->
+		<script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+body
+{
+    background: #222;
+    text-align: center;
+}
+.text
+{
+    color: white;
+    font-size: 25px;
+}
+.p5Canvas
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+#restart
+{
+    position: absolute;
+    left: 50%;
+    top: 130px;
+    transform: translateX(-50%) translateY(-50%);
+}
+#name
+{
+    position: absolute;
+    width: 100%;
+    top: 70px;
+}
+#score
+{
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+}
+#go-back-btn
+{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
